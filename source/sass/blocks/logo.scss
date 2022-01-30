@@ -1,0 +1,174 @@
+@media (min-width: $min-desktop-whidth) {
+  .logo__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 1302px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logo__wrapper img {
+    width: 95px;
+    height: 80px;
+    padding-left: 10px;
+  }
+
+  .logo__address {
+    padding-top: 21px;
+    padding-left: 37px;
+  }
+
+  .logo__address p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: $light-gray;
+  }
+
+  .logo__address a {
+    display: block;
+    position: relative;
+    padding-top: 2px;
+    margin-left: 20px;
+    color: $red;
+    border-bottom: 1px dashed $red;
+  }
+
+  .logo__address a::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: -20px;
+    background-image: url("../../img/icon-map-pin.svg");
+  }
+
+  .logo__search-form {
+    position: relative;
+    padding-top: 23px;
+    padding-left: 48px;
+    width: 28.5%;
+  }
+
+  .logo__search-form label {
+    width: 100%;
+  }
+
+  .logo__search-form input {
+    width: 100%;
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border: 1px solid $border-gray;
+    border-radius: 2px;
+    background-color: $input-gray;
+  }
+
+  .logo__search-form input::placeholder {
+    color: $light-gray;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .logo__search-form button {
+    position: absolute;
+    top: 30px;
+    right: 4px;
+    border: none;
+    background-color: $input-gray;
+  }
+
+  .logo__text {
+    margin: 0;
+    padding-top: 25px;
+    padding-left: 38px;
+    color: $light-gray;
+    font-size: 12px;
+    line-height: 130%;
+    max-width: 120px;
+  }
+
+  .logo__social-list {
+    padding: 28px 0 0 35px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  .logo__social-item {
+    padding-right: 10px;
+  }
+
+  .logo__contact-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 17px 0 0 30px;
+    margin: 0;
+    min-width: 280px;
+  }
+
+  .logo__contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo__contact-item p {
+    font-size: 12px;
+    line-height: 16px;
+    color: $light-gray;
+    margin: 0;
+  }
+
+  .logo__contact-item a {
+    font-weight: bold;
+    color: $black;
+    line-height: 16px;
+  }
+
+  .logo__contact-item button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: $red;
+    line-height: 16px;
+  }
+}
+
+@media screen and (min-width: $min-mobile-whidth) and (max-width: $max-mobile-whidth) {
+  .logo__wrapper {
+    box-shadow: 0px 2px 6px $shadow-gray;
+  }
+
+  .logo__wrapper img {
+    width: 59px;
+    height: 45px;
+    padding-left: 63px;
+    padding-top: 2px;
+  }
+
+  .logo__address {
+    display: none;
+  }
+
+  .logo__search-form {
+    display: none;
+  }
+
+  .logo__text {
+    display: none;
+  }
+
+  .logo__social-list {
+    display: none;
+  }
+
+  .logo__contact-list {
+    display: none;
+  }
+}

@@ -1,13 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Каталог СИРИУС</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" type="font/woff2" href="./fonts/roboto-v29-latin_cyrillic-300.woff2" as="font" crossorigin />
+  <link rel="preload" type="font/woff2" href="./fonts/roboto-v29-latin_cyrillic-500.woff2" as="font" crossorigin />
+  <link rel="preload" type="font/woff2" href="./fonts/roboto-v29-latin_cyrillic-700.woff2" as="font" crossorigin />
+  <link rel="preload" type="font/woff2" href="./fonts/roboto-v29-latin_cyrillic-regular.woff2" as="font" crossorigin />
 </head>
-<body>
-  <h1>Добро пожаловать.</h1>
+
+<body class="page__body">
+  <header class="page-header">
+    <section class="logo">
+      <div class="logo__wrapper">
+        <picture>
+          <source type="image/webp" media="(min-width: 1302px)" srcset="./img/logo-desktop.webp 1x,
+          ./img/logo-desktop@2x.webp 2x" />
+          <source type="image/webp" srcset="./img/logo-mobile.webp 1x,
+          ./img/logo-mobile@2x.webp 2x" />
+          <!-- 1x: 95px; 2x: 190px -->
+          <source media="(min-width: 1302px)" srcset="./img/logo-desktop.png 1x,
+          ./img/logo-desktop@2x.png 2x" />
+          <!-- 1x: 59px; 2x: 118px -->
+          <img src="./img/logo-mobile.png" srcset="./img/logo-mobile@2x.png 2x" width="59" height="45"
+            alt="Логотип спецодежды Сириус" />
+        </picture>
+        <div class="logo__address">
+          <p>Выберите ваш город:</p>
+          <a href="#">
+            Санкт-Петербург
+          </a>
+        </div>
+        <!--Форма поиска-->
+        <form class="logo__search-form" method="get" action="#">
+          <label for="search">
+            <input type="search" name="search" id="search" placeholder="Поиск" required /></label>
+          <button type="submit">
+            <svg width="20" height="20" fill="none">
+              <use href="./img/sprite_auto.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+        <p class="logo__text">Режим работы<br>Пн-Пт с 8:00 — 18:00</p>
+        <ul class="logo__social-list">
+          <li class="logo__social-item">
+            <a href="#">
+              <svg width="24" height="24" fill="none">
+                <use href="./img/sprite_auto.svg#icon-fb"></use>
+              </svg></a>
+          </li>
+          <li class="logo__social-item">
+            <a href="#">
+              <svg width="24" height="24" fill="none">
+                <use href="./img/sprite_auto.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="logo__social-item">
+            <a href="#">
+              <svg width="24" height="24" fill="none">
+                <use href="./img/sprite_auto.svg#icon-vk"></use>
+              </svg></a>
+          </li>
+        </ul>
+        <ul class="logo__contact-list">
+          <li class="logo__contact-item">
+            <p>г. Москва</p>
+            <a href="tel:+74957772345">+7 (495) 777-2345</a>
+            <button type="button">Заказать звонок</button>
+          </li>
+          <li class="logo__contact-item">
+            <p>г. Ногинск</p>
+            <a href="+74956004400">+7 (495) 600-4400</a>
+            <button type="button">Заказать звонок</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--<section class="navigation">
+      <h1 class="visually-hidden">Навигация по сайту</h1>
+      <div class="navigation__catalog">
+        <a href="#">Каталог</a>
+        <!--Бургерное меню и ссылка на страницу одновременно?
+      </div>
+      <nav class="navigation-site">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">О компании</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Скидки</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Услуги</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Дилеры</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Магазины</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Контакты</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Честный знак</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="navigation__order-list">
+        <li class="navigation__order-item">
+          <a href="#">
+            <svg width="20" height="18" fill="none">
+              <use href="./img/sprite_auto.svg#icon-favourite"></use>
+            </svg>
+            <span>0</span>
+          </a>
+        </li>
+        <li class="navigation__order-item">
+          <a href="#">
+            <svg width="21" height="21" fill="none">
+              <use href="./img/sprite_auto.svg#icon-basket"></use>
+            </svg>
+            <span>0</span>
+          </a>
+        </li>
+      </ul>
+      <div class="navigation__user-login">
+        <a href="#">
+          <svg width="21" height="21" fill="none">
+            <use href="./img/sprite_auto.svg#icon-user"></use>
+          </svg>
+          Войти
+        </a>
+      </div>
+    </section>-->
+  </header>
+
+
 </body>
+
 </html>
